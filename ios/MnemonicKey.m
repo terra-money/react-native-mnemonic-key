@@ -5,8 +5,10 @@
 RCT_EXTERN_METHOD(generateMnemonic: (RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(derivePrivateKey: (NSString*)mnemonic withHdPath: (NSString*)hdPath
+RCT_EXTERN_METHOD(derivePrivateKey: (NSString*)mnemonic 
+                 withCoinType: (NSInteger*)coinType
+                 withAccount: (NSInteger*)account
+                 withIndex: (NSInteger*)index
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
-
 @end

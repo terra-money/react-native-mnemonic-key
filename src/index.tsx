@@ -2,7 +2,12 @@ import { NativeModules } from 'react-native';
 
 type NativeMKExports = {
   generateMnemonic(): Promise<string>;
-  derivePrivateKey(mnemonic: string, hdPath: string): Promise<string>;
+  derivePrivateKey(
+    mnemonic: string,
+    coinType: number,
+    account: number,
+    index: number
+  ): Promise<string>;
 };
 
 export const MK: NativeMKExports = NativeModules.MnemonicKey;
@@ -83,11 +88,8 @@ export class RNMnemonicKey extends RawKey {
     if (mnemonic === undefined) {
       mnemonic = await MK.generateMnemonic();
     }
-    const hdPathLuna = `m/44'/${coinType}'/${account}'/0/${index}`;
-    const privateKey = Buffer.from(
-      await MK.derivePrivateKey(mnemonic, hdPathLuna),
-      'hex'
-    );
+    const pkHex = await MK.derivePrivateKey(mnemonic, coinType, account, index);
+    const privateKey = Buffer.from(pkHex, 'hex');
 
     if (!privateKey) {
       throw new Error('Failed to derive key pair');

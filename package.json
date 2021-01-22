@@ -1,7 +1,7 @@
 {
   "name": "react-native-mnemonic-key",
   "version": "0.1.0",
-  "description": "MnemonicKey impl",
+  "description": "Native Android and iOS implementation of MnemonicKey for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",

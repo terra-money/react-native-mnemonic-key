@@ -58,9 +58,10 @@ class MnemonicKey: NSObject {
         resolve(Utils.generateMnemonic())
     }
 
-    @objc(derivePrivateKey:withHdPath:withResolver:withRejecter:)
-    func derivePrivateKey(mnemonic:String, hdPath:String, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-        resolve(Utils.generate(mnemonic: mnemonic, path: hdPath).hexPrivateKey)
+    @objc(derivePrivateKey:withCoinType:withAccount:withIndex:withResolver:withRejecter:)
+    func derivePrivateKey(mnemonic:String, coinType:Int, account:Int, index:Int, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
+        let path = "m/44'/\(coinType)'/\(account)'/0/\(index)"
+        resolve(Utils.generate(mnemonic: mnemonic, path: path).hexPrivateKey)
     }
 }
 
