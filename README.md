@@ -7,7 +7,7 @@ This library provides `RNMnemonicKey`, a native Android and iOS implementation o
 Install to your React Native app's `package.json`:
 
 ```sh
-yarn add react-native-mnemonic-key
+$ yarn add react-native-mnemonic-key
 ```
 
 ### Android Setup
@@ -34,7 +34,26 @@ android {
 You may need to modify your iOS app's `Podfile` to enable Modular Headers for `TrezorCrypto`.
 
 ```ruby
-pod 'TrezorCrypto', :modular_headers => true # Need to add modular headers
+# ios/Podfile
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/react-native-unimodules/cocoapods.rb'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '10.0'
+
+target 'demo' do
+  use_unimodules!
+  config = use_native_modules!
+
+  use_react_native!(:path => config["reactNativePath"])
+  pod 'TrezorCrypto', :modular_headers => true # ADD THIS LINE
+end
+```
+
+Then run in your React Native iOS app's `ios/` directory:
+
+```sh
+$ pod install
 ```
 
 ## Usage
@@ -55,8 +74,13 @@ RNMnemonicKey.create({ ...options }).then((rnmk) => terra.wallet(rnmk));
 
 For your convenience, a full example demo app is provided as a reference inside `/example`.
 
-- `yarn example ios` - run iOS demo
-- `yarn example android` - run Android demo
+```sh
+# Run iOS Demo
+$ yarn example ios
+
+# Run Android Demo
+$ yarn example android
+```
 
 ```tsx
 import * as React from 'react';
