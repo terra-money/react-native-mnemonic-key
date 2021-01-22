@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		5E555C0D2413F4C50049A1A2 /* MnemonicKey.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* MnemonicKey.m */; };
-		F4FF95D7245B92E800C19C63 /*  MnemonicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  MnemonicKey.swift */; };
-
+		3D03009225BB685E0089CB17 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03008D25BB685E0089CB17 /* Utils.swift */; };
+		3D03009325BB685E0089CB17 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03008E25BB685E0089CB17 /* Sign.swift */; };
+		3D03009425BB685E0089CB17 /* TerraWalletSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03008F25BB685E0089CB17 /* TerraWalletSDK.swift */; };
+		3D03009525BB685E0089CB17 /* KeyDerivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03009025BB685E0089CB17 /* KeyDerivation.swift */; };
+		3D03009625BB685E0089CB17 /* KeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D03009125BB685E0089CB17 /* KeyPair.swift */; };
+		F4FF95D7245B92E800C19C63 /* MnemonicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* MnemonicKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,11 +29,14 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libMnemonicKey.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMnemonicKey.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
+		3D03008D25BB685E0089CB17 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = "../../../terra/react-native-mnemonic-key/ios/Utils.swift"; sourceTree = "<group>"; };
+		3D03008E25BB685E0089CB17 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sign.swift; path = "../../../terra/react-native-mnemonic-key/ios/Sign.swift"; sourceTree = "<group>"; };
+		3D03008F25BB685E0089CB17 /* TerraWalletSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TerraWalletSDK.swift; path = "../../../terra/react-native-mnemonic-key/ios/TerraWalletSDK.swift"; sourceTree = "<group>"; };
+		3D03009025BB685E0089CB17 /* KeyDerivation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyDerivation.swift; path = "../../../terra/react-native-mnemonic-key/ios/KeyDerivation.swift"; sourceTree = "<group>"; };
+		3D03009125BB685E0089CB17 /* KeyPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyPair.swift; path = "../../../terra/react-native-mnemonic-key/ios/KeyPair.swift"; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* MnemonicKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MnemonicKey.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* MnemonicKey-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MnemonicKey-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* MnemonicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MnemonicKey.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +61,14 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
+				3D03009025BB685E0089CB17 /* KeyDerivation.swift */,
+				3D03009125BB685E0089CB17 /* KeyPair.swift */,
+				3D03008E25BB685E0089CB17 /* Sign.swift */,
+				3D03008F25BB685E0089CB17 /* TerraWalletSDK.swift */,
+				3D03008D25BB685E0089CB17 /* Utils.swift */,
 				F4FF95D6245B92E800C19C63 /* MnemonicKey.swift */,
 				B3E7B5891CC2AC0600A0062D /* MnemonicKey.m */,
 				F4FF95D5245B92E700C19C63 /* MnemonicKey-Bridging-Header.h */,
-
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,10 +130,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
+				3D03009425BB685E0089CB17 /* TerraWalletSDK.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* MnemonicKey.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* MnemonicKey.m in Sources */,
-
+				3D03009525BB685E0089CB17 /* KeyDerivation.swift in Sources */,
+				3D03009625BB685E0089CB17 /* KeyPair.swift in Sources */,
+				3D03009225BB685E0089CB17 /* Utils.swift in Sources */,
+				3D03009325BB685E0089CB17 /* Sign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,11 +248,9 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = MnemonicKey;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "MnemonicKey-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Debug;
 		};
@@ -259,10 +267,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = MnemonicKey;
 				SKIP_INSTALL = YES;
-
 				SWIFT_OBJC_BRIDGING_HEADER = "MnemonicKey-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-
 			};
 			name = Release;
 		};

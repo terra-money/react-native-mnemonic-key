@@ -1,14 +1,16 @@
 import * as React from 'react';
-
 import { StyleSheet, View, Text } from 'react-native';
-import MnemonicKey from 'react-native-mnemonic-key';
-
+import { RNMnemonicKey } from 'react-native-mnemonic-key';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<string | undefined>();
 
   React.useEffect(() => {
-    MnemonicKey.multiply(3, 7).then(setResult);
+    setInterval(() => {
+      RNMnemonicKey.create()
+        .then((mk) => mk.accAddress)
+        .then(setResult);
+    }, 50);
   }, []);
 
   return (
