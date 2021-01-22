@@ -1,6 +1,6 @@
 {
   "name": "react-native-mnemonic-key",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Native Android and iOS implementation of MnemonicKey for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/ouiliame/react-native-mnemonic-key",
+  "repository": "https://github.com/terra-project/react-native-mnemonic-key",
   "author": "William Chen <wchen298@gmail.com> (https://github.com/ouiliame)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ouiliame/react-native-mnemonic-key/issues"
+    "url": "https://github.com/terra-project/react-native-mnemonic-key/issues"
   },
-  "homepage": "https://github.com/ouiliame/react-native-mnemonic-key#readme",
+  "homepage": "https://github.com/terra-project/react-native-mnemonic-key#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
