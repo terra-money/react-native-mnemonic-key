@@ -1,5 +1,5 @@
 import { NativeModules } from 'react-native';
-import { Buffer } from 'buffer'
+import { Buffer } from 'buffer';
 
 type NativeMKExports = {
   generateMnemonic(): Promise<string>;
