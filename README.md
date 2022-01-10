@@ -1,3 +1,4 @@
+### ⚠️ This project is deprecated, Please use https://github.com/terra-money/terra.js
 # react-native-mnemonic-key
 
 This library provides `RNMnemonicKey`, a native Android and iOS implementation of Terra.js's `MnemonicKey`, made available for React Native. This significantly improves performance and compatibility in mobile apps.
