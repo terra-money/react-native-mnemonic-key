@@ -11,6 +11,8 @@ Install to your React Native app's `package.json`:
 $ yarn add react-native-mnemonic-key
 ```
 
+Futhermore, follow [these instructions](https://github.com/terra-money/terra.js#terrajs-in-react-native) to install terra.js requirements
+
 ### Android Setup
 
 You may need to set `multiDexEnabled true` in your Android app's `build.gradle`:
@@ -126,6 +128,13 @@ const styles = StyleSheet.create({
 ```
 
 ![demo](demo.png)
+
+## Troubleshooting
+```
+ERROR    Error: Crypto module not found
+ERROR    Invariant Violation: Module AppRegistry is not a registered callable module (calling runApplication)
+```
+You are missing some requirements for terra.js, follow [these instructions](https://github.com/terra-money/terra.js#terrajs-in-react-native)
 
 ## License
 
